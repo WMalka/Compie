@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 // Register AuthServiceClient with HttpClient
 builder.Services.AddHttpClient<IAuthenticationService, AuthServiceClient>(client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5100/"); // AuthService base URL
+    client.BaseAddress = new Uri(builder.Configuration["AuthService:BaseUrl"]);
 });
 
 // Add Swagger

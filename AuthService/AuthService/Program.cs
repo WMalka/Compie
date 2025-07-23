@@ -7,6 +7,17 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add CORS policy to allow Swagger UI from https://localhost:5011
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSwaggerUI", policy =>
+    {
+        policy.WithOrigins("https://localhost:5011")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Add services to the container.
 builder.Services.AddControllers();
 
@@ -78,6 +89,9 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "AuthService API V1");
     });
 }
+
+// Use CORS policy before authentication/authorization
+app.UseCors("AllowSwaggerUI");
 
 app.UseRouting();
 
