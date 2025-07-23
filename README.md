@@ -111,7 +111,7 @@ dotnet run
   ```json
   {
     "userName": "admin",
-    "password": "admin"
+    "password": "password"
   }
   ```
 - **Access Protected Endpoint via Gateway**:  
