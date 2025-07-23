@@ -10,6 +10,12 @@ This solution demonstrates a simple microservices architecture using .NET 8/9, f
 Compie/
 │
 ├── APIGatewayService/
+└── AuthService/
+    
+```
+## APIGatewayService
+```
+├── APIGatewayService/
 │   └── APIGatewayService/
 │       ├── Controllers/
 │       │   └── APIGatewayController.cs
@@ -23,7 +29,10 @@ Compie/
 │       ├── Program.cs
 │       ├── appsettings.json
 │       └── ...
-│
+```
+
+## AuthService
+```
 └── AuthService/
     └── AuthService/
         ├── Controllers/
