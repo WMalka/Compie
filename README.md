@@ -13,7 +13,7 @@ Compie/
 └── AuthService/
     
 ```
-## APIGatewayService
+### APIGatewayService
 ```
 ├── APIGatewayService/
 │   └── APIGatewayService/
@@ -31,7 +31,7 @@ Compie/
 │       └── ...
 ```
 
-## AuthService
+### AuthService
 ```
 └── AuthService/
     └── AuthService/
